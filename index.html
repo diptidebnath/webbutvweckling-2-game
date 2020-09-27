@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html;
+	charset=windows-1252">
+	<title>Text Based Game</title>
+	<script type="text/javascript" src="script.js"></script>
+	<link type="text/css" rel="stylesheet" href="style.css" media="all" />
+</head>
+
+
+
+<body>
+	<main class="container">
+		<h1>Text based game</h1>
+		<p>After a drunken night out with friends, you awaken the next morning in a thick, dank forest. Head spinning and fighting the urge to vomit, you stand and marvel at your new, unfamiliar setting. The peace quickly fades when you hear a grotesque sound emitting behind you. A slobbering orc is running towards you. You will:</p>
+		<div id="input-container">
+			<input type="radio" name="step1"  onclick="step1(this.value)" value="throughRock">Grab a nearby rock and throw it at the orc
+			<input type="radio" name="step1" onclick="step1(this.value)" value="laydown">Lie down and wait to be mauled
+			<input type="radio" name="step1" onclick="step1(this.value)" value="run">Run
+
+		</div>
+		<div id="step2-throughRock" style="display: none">
+			<div id="interactiveText"></div>
+			<input type="radio" name="step2"  onclick="step2(this.value)" value="throughRock">Throw another rock
+			<input type="radio" name="step2" onclick="step2(this.value)" value="runtocave">Run towards a nearby cave
+			<input type="radio" name="step2" onclick="step2(this.value)" value="run">Run
+
+		</div>
+
+		<div id="step2-run" >
+			<div id="interactiveText2"></div>
+			<div id="inputContainer" style="display: none">
+				<input type="radio" name="step3"  onclick="step2(this.value)" value="hidebehind">Hide behind boulder
+			<input type="radio" name="step3" onclick="step2(this.value)" value="trapped">Trapped, so you fight
+			<input type="radio" name="step3" onclick="step2(this.value)" value="runabandunded">Run towards an abandoned town
+			</div>
+		</div>
+
+<div id="interactiveText3"></div>
+<button id="reloadButton" style="display: none" type="button" onClick="window.location.reload(true);">Restart Again!</button>
+
+	</main>
+</body>
+</html>
